@@ -10,6 +10,9 @@ import { VictoryGroup } from 'victory';
 import { VictoryArea } from 'victory';
 import { VictoryAxis } from 'victory';
 import { VictoryLabel } from 'victory';
+import StockProfile from './Components/StockProfile';
+import Recommendations from './Components/Recommendations';
+import NewsArticle from './Components/NewsArticles';
 
 class App extends Component {
   constructor() {
@@ -46,7 +49,12 @@ class App extends Component {
       hideAutoFill: false,
       //Show graph on select
       graphVisible: false,
-
+      //Show stock profile on select
+      stockProfileVisible: false,
+      //Show Recommendation profile on select
+      recommendationVisible: false,
+      //News Article Show on Select
+      articleVisible: false,
     }
   }
 
@@ -245,8 +253,11 @@ class App extends Component {
             }
           }).then((stock) => {
             this.setState({
-              stockProfile: stock.data.profile
+              stockProfile: stock.data.profile,
               graphVisible: true,
+              stockProfileVisible: true,
+              recommendationVisible: true,
+              articleVisible: true,
             })
           })
         })
@@ -261,7 +272,7 @@ class App extends Component {
       <div className="App">
         <h1>6iXTrades</h1>
 
-          <SearchBar 
+        <SearchBar 
           handleChange={this.handleChange}
           handleSubmit={this.handleSubmit}
           handlePress={this.handlePress}
@@ -273,8 +284,7 @@ class App extends Component {
           bestMatches={this.state.bestMatches}
           />}
 
-          {/* General Stock Information such as opening price and etc. */}
-          {this.state.mainVisible && <Main 
+        {this.state.mainVisible && <Main 
           handleChange = {this.handleChange}
           handleSubmit = {this.handleSubmit}
           handlePress = {this.handlePress}
@@ -293,16 +303,32 @@ class App extends Component {
           stockProfile = {this.state.stockProfile}
           />}
 
-          {this.state.graphVisible && <Graph 
+        {this.state.graphVisible && <Graph 
           stockProfile = {this.state.stockProfile}
           stockGraphArray={this.state.stockGraphArray}
           symbol = {this.state.symbol}
           />}
-          
 
+        {this.state.stockProfileVisible && <StockProfile
+          stockProfile={this.state.stockProfile}
+          symbol={this.state.symbol}
+          />}
+
+        {this.state.recommendationVisible && <Recommendations 
+          symbol = {this.state.symbol}
+          newsArticles = {this.state.newsArticles}
+          positive = {this.state.positive}
+          negative = {this.state.negative}
+          neutral = {this.state.neutral}
+          stockPrediction={this.state.stockPrediction}
+          />}
+          
+        {this.state.articleVisible && <NewsArticle 
+          symbol = {this.state.symbol}
+          newsArticles={this.state.newsArticles}
+          />}
     </div>
     );
-
   }
 }
 
