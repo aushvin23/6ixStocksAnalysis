@@ -12,12 +12,14 @@ class SearchBar extends Component {
                         type="text"
                         placeholder="Search for Stock"
                         name="userInput"
+                        className = "user_input"
                         value={this.props.userInput}
                         onChange={this.props.handleChange}
                         onKeyUp={this.props.handlePress}
                     />
 
                     <button
+                        className = "search_submit_button"
                         onClick={this.props.handleSubmit}>Submit
                     </button>
                 </form>

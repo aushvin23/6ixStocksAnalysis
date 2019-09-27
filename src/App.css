@@ -1,5 +1,9 @@
 .App {
-  text-align: center;
+  position: relative;
+  width: 100%; 
+  background-image: linear-gradient(rgba(131, 131, 133, 0.7), rgba(2, 2, 1, 0.9)),
+  url('./images/43606.jpg');
+  height: 1000px !important;
 }
 
 .App-logo {
@@ -19,6 +23,199 @@
   color: white;
 }
 
+
+
+.search_bar_view {
+   min-width: 430px;
+   padding-top: 2px;
+   margin: 0 auto;
+}
+.search_bar_title{
+  width: 800px;
+  font-size: 100px;
+  font-weight: 900;
+  position:fixed;
+  left: calc(50% - 350px);
+  bottom: 50%;
+  text-align: center;
+  color: rgb(53, 47, 47);
+  text-shadow:  rgba(255, 255, 255, 0.2) 0px 0px 5px, rgba(255, 255, 255, 0.2) 0px 0px 10px, rgba(255, 255, 255, 0.2) 0px 0px 15px, rgba(214, 211, 211, 0.2) 0px 0px 20px, rgba(194, 188, 188, 0.2) 0px 0px 30px, rgba(39, 38, 39, 0.2) 0px 0px 40px, rgba(37, 36, 37, 0.2) 0px 0px 50px, rgba(49, 48, 48, 0.2) 0px 0px 75px;
+}
+
+.user_input{
+  width: 800px;
+  padding: 20px 30px;
+  position:fixed;
+  top: 50%;
+  height: 18px;
+  left: calc(50% - 400px);
+  background-color: transparent;
+  transition: transform 250ms ease-in-out;
+  font-size: 18px;
+  line-height: 18px;
+  color: rgba(181,196,211,1);
+  box-shadow:  rgba(209, 209, 209, 0.1) 0px 0px 5px, rgba(177, 176, 176, 0.1) 0px 0px 10px, rgba(196, 195, 195, 0.1) 0px 0px 15px, rgba(214, 211, 211, 0.1) 0px 0px 20px, rgba(194, 188, 188, 0.1) 0px 0px 30px, rgba(39, 38, 39, 0.1) 0px 0px 40px, rgba(37, 36, 37, 0.1) 0px 0px 50px, rgba(49, 48, 48, 0.1) 0px 0px 75px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  background-position: 95% center;
+  border-radius: 0;
+  border: 1px solid rgba(181,196,211,1);
+  transition: all 250ms ease-in-out;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.user_input:hover{
+  line-height: 18px;
+  padding: 12px 20px;
+  outline: 0;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #575756;
+  border-radius: 0;
+  background-position: 100% center;
+}
+
+.user_input:focus{
+  padding: 12px 20px;
+  outline: 0;
+  line-height: 18px;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #575756;
+  border-radius: 0;
+  background-position: 100% center;
+}
+
+.user_input:focus + .search_bar_title{
+  position: fixed;
+  top: 0px;
+  left: 25%;
+}
+
+.user_input::placeholder
+{
+  color: rgba(181,196,211,0.6);
+}
+
+.search_submit_button{
+  display:none;
+  visibility: hidden;
+}
+
+.dropDownList{
+  position:fixed;
+  width: 845px;
+  top: calc( 50% + 50px);
+  left: calc(50% - 440px);
+  color:rgba(181,196,211,1);
+  list-style-type: none;
+}
+
+.dropDownList li{
+  font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+  box-shadow:  rgba(15, 13, 13, 0.1) 0px 0px 5px, rgba(2, 2, 2, 0.1) 0px 0px 10px, rgba(29, 28, 28, 0.1) 0px 0px 15px, rgba(34, 33, 33, 0.1) 0px 0px 20px, rgba(27, 26, 26, 0.1) 0px 0px 30px, rgba(39, 38, 39, 0.1) 0px 0px 40px, rgba(37, 36, 37, 0.1) 0px 0px 50px, rgba(49, 48, 48, 0.1) 0px 0px 75px;
+  
+  border-bottom: 3px solid rgba(204, 204, 204, 0.253);
+}
+
+.stockSummary{
+  height:50%;
+}
+
+.logo{
+  position:fixed;
+  width: 200px;
+  height: 200px;
+  left: calc(50% - 100px);
+  box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 5px, rgba(211, 209, 209, 0.5) 0px 0px 10px, rgba(255, 255, 255, 0.4) 0px 0px 15px, rgba(214, 211, 211, 0.3) 0px 0px 20px, rgba(194, 188, 188, 0.4) 0px 0px 30px, rgba(39, 38, 39, 0.4) 0px 0px 40px, rgba(37, 36, 37, 0.4) 0px 0px 50px, rgba(49, 48, 48, 0.2) 0px 0px 75px;
+  top: 50px;
+}
+.stockSummaryTitleContainer{
+  position: fixed;
+  top: 225px;
+  width: 500px;
+  left: calc(50% - 160px) !important;
+  background-color: transparent;
+  color: rgb(53, 47, 47);
+  text-shadow:  rgba(255, 255, 255, 0.5) 0px 0px 5px, rgba(211, 209, 209, 0.5) 0px 0px 10px, rgba(255, 255, 255, 0.4) 0px 0px 15px, rgba(214, 211, 211, 0.3) 0px 0px 20px, rgba(194, 188, 188, 0.4) 0px 0px 30px, rgba(39, 38, 39, 0.4) 0px 0px 40px, rgba(37, 36, 37, 0.4) 0px 0px 50px, rgba(49, 48, 48, 0.2) 0px 0px 75px;
+  font: 200 30px/1.5 Helvetica, Verdana, sans-serif;
+}
+
+.graph{
+  font: 200 10px/1.5 Helvetica, Verdana, sans-serif;
+  width: 500px;
+  height:500px;
+  position:fixed;
+  left: calc(50% - 240px);
+  top: calc(50% - 250px );
+  text-shadow: rgba(255, 255, 255, 0.5) 0px 0px 5px, rgba(211, 209, 209, 0.5) 0px 0px 10px, rgba(255, 255, 255, 0.4) 0px 0px 15px, rgba(214, 211, 211, 0.3) 0px 0px 20px, rgba(194, 188, 188, 0.4) 0px 0px 30px, rgba(39, 38, 39, 0.4) 0px 0px 40px, rgba(37, 36, 37, 0.4) 0px 0px 50px, rgba(49, 48, 48, 0.2) 0px 0px 75px;
+  
+}
+
+.stockSummaryLeftBox{
+  position:fixed;
+  height: 95%;
+  box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 5px, rgba(211, 209, 209, 0.5) 0px 0px 10px, rgba(255, 255, 255, 0.4) 0px 0px 15px, rgba(214, 211, 211, 0.3) 0px 0px 20px, rgba(194, 188, 188, 0.4) 0px 0px 30px, rgba(39, 38, 39, 0.4) 0px 0px 40px, rgba(37, 36, 37, 0.4) 0px 0px 50px, rgba(49, 48, 48, 0.2) 0px 0px 75px;
+  top: 30px;
+  left: 30px;
+  width: 30%;
+  color: white;
+  overflow: auto; 
+  font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+}
+
+.stockSummaryAlignment{
+  position:fixed;
+  left: 40px !important;
+}
+
+.profile{
+  position:fixed;
+  top: 50%;
+  height: 50%;
+  left: 40px;
+  width: 30%;
+  color: white;
+  font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+}
+
+.price, .open, .high, .low, .close, .volume, .day, .change{
+  position:relative;
+  left: 10px;
+
+}
+
+.middleBox{
+  position:fixed;
+  height: 25%;
+  box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 5px, rgba(211, 209, 209, 0.5) 0px 0px 10px, rgba(255, 255, 255, 0.4) 0px 0px 15px, rgba(214, 211, 211, 0.3) 0px 0px 20px, rgba(194, 188, 188, 0.4) 0px 0px 30px, rgba(39, 38, 39, 0.4) 0px 0px 40px, rgba(37, 36, 37, 0.4) 0px 0px 50px, rgba(49, 48, 48, 0.2) 0px 0px 75px;
+  bottom: 17px;
+  left: 35%;
+  width: 30%;
+  color: white;
+  font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+  text-align: center;
+}
+
+.articleRightBox{
+  
+  list-style-type: none;
+  position:fixed;
+  height: 95%;
+  box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 5px, rgba(211, 209, 209, 0.5) 0px 0px 10px, rgba(255, 255, 255, 0.4) 0px 0px 15px, rgba(214, 211, 211, 0.3) 0px 0px 20px, rgba(194, 188, 188, 0.4) 0px 0px 30px, rgba(39, 38, 39, 0.4) 0px 0px 40px, rgba(37, 36, 37, 0.4) 0px 0px 50px, rgba(49, 48, 48, 0.2) 0px 0px 75px;
+  top: 30px;
+  right: 30px;
+  width: 30%;
+  color: white;
+  overflow: auto; 
+  margin-left: 10px;
+  font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+}
+
+.newsImg{
+  width: 400px;
+  margin-left: calc(50% - 200px);
+}
 .App-link {
   color: #61dafb;
 }

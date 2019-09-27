@@ -270,15 +270,15 @@ class App extends Component {
   render () {
     return (
       <div className="App">
-        <h1>6iXTrades</h1>
-
-        <SearchBar 
+        {!this.state.mainVisible && <div className = "search_bar_view">
+        {!this.state.mainVisible && <h1 className ="search_bar_title">6iXTrades</h1>}
+        {!this.state.mainVisible &&<SearchBar
           handleChange={this.handleChange}
           handleSubmit={this.handleSubmit}
           handlePress={this.handlePress}
           userInput={this.state.userInput}
-          />
-
+          />}
+        </div>}
         {this.state.hideAutoFill && <AutoFillDropDown
           handleSelect={this.handleSelect}
           bestMatches={this.state.bestMatches}

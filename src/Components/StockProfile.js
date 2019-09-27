@@ -7,30 +7,25 @@ class StockProfile extends Component {
         return (
             <div>
                 <div className="profile">
-                    <h2>{this.props.stockProfile.companyName}</h2>
                     <div className="profileInfo">
 
                         <div className="exchange">
-                            <p>Exchange:</p>
-                            <p>{this.props.stockProfile.exchange}</p>
+                            <p><strong>  Exchange:</strong> {this.props.stockProfile.exchange}</p>
                         </div>
 
                         <div className="industry">
-                            <p>Industry:</p>
-                            <p>{this.props.stockProfile.industry}</p>
+                            <p><strong>  Industry: </strong>{this.props.stockProfile.industry}</p>
                         </div>
 
                         <div className="ceo">
-                            <p>CEO:</p>
-                            <p>{this.props.stockProfile.ceo}</p>
+                            <p><strong>  CEO: </strong>{this.props.stockProfile.ceo}</p>
                         </div>
 
-                        <p className="stockDescription">Description</p>
-                        <p className="stockDescriptionInfo">{this.props.stockProfile.description}</p>
+                        <p className="stockDescription"><strong>  Description: </strong></p>
+                        <p className="stockDescriptionInfo">  {this.props.stockProfile.description}</p>
 
                         <div className="website">
-                            <p>Website: </p>
-                            <p>{this.props.stockProfile.website}</p>
+                            <p><strong>  Website: </strong>{this.props.stockProfile.website}</p>
                         </div>
                     </div>
                 </div>

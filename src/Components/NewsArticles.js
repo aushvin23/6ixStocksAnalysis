@@ -4,14 +4,14 @@ class NewsArticle extends Component {
 
     render() {
         return (
-            <div>
-                    <h2>{this.props.symbol} - Today's News</h2>
+            <div className = "articleRightBox">
+                    <p><strong>{this.props.symbol} - Today's News</strong></p>
                     {
                         this.props.newsArticles.map((news, index) => {
                             return (
                                 <li key={index}>
 
-                                    <img src={`${news.image_url}`} alt="" />
+                                    <img src={`${news.image_url}`} alt="" className ="newsImg"/>
 
                                     <div className="articleInfo">
                                         <h3>{news.source_name}: {news.title}</h3>

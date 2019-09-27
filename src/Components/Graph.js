@@ -11,6 +11,7 @@ class Graph extends Component {
     render() {
         const chartTheme = {
             axis: {
+
                 style: {
                     tickLabels: {
                         // this changed the color of my numbers to white
@@ -22,10 +23,9 @@ class Graph extends Component {
         return (
             <div>
                 <div className="graph">
-                    <VictoryChart width={300} height={300} domainPadding={10}
+                    <VictoryChart width={300} height={300} domainPadding={10} animate={{ duration: 1000 }}
                         theme={chartTheme}
                     >
-
                     <VictoryGroup
                         style={{
                             data: { strokeWidth: 3, fillOpacity: 0.7 }
@@ -34,7 +34,7 @@ class Graph extends Component {
 
                     <VictoryArea
                         style={{
-                            data: { fill: "cyan", stroke: "cyan" }
+                            data: { fill: "#c4aa8c", stroke: "#c8bba3" }
                         }}
                         data={this.props.stockGraphArray}
                     />

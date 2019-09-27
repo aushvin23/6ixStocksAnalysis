@@ -7,7 +7,7 @@ class AutoFillDropDown extends Component {
         return (
             <div>
 
-                <ul>
+                <ul className = "dropDownList">
                     {
                         this.props.bestMatches.map(((match, index) => {
                             return (
